@@ -1,0 +1,77 @@
+ 
+  .menu {
+    width: 250px;
+    background-color: #fbe3cb;
+    color: white;
+    padding-top: 20px;
+    position: fixed;
+    height: 100vh;    
+    top:0;
+    left:0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .menuItem {
+    padding: 10px;
+    padding-left: 25px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    color: #6b1313;
+    /* font-family: 'Poiret One'; */
+    font-family: 'VT323';
+    font-size: 1.5rem;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .menuItem:hover {
+    background-color: #f7d7b7;
+  }
+  
+  .subMenu .menuItem {
+    padding: 10px;
+  }
+  
+  .content {
+    margin-left: 250px;
+    padding: 20px;
+  }
+  
+  .subMenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    opacity: 0;
+    /* background-color: #f7d7b7; */
+  }
+
+  .subMenu .menuItem {
+    padding-left: 40px;;
+  }
+
+  .subMenu.open {
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  .logo img {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    cursor: pointer;
+    transition: opacity 0.25s ease-in-out;
+  }
+
+  .logo img:hover {
+    opacity: 0.85;
+  }
+  
+
+/* 
+  .content {
+    margin-left: 250px; 
+    padding: 20px;
+  } */
