@@ -29,6 +29,10 @@
   .menuItem:hover {
     background-color: #f7d7b7;
   }
+
+.link {    
+    text-decoration: none;
+  }
   
   .subMenu .menuItem {
     padding: 10px;

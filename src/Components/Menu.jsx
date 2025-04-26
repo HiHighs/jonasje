@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import styles from './Menu.module.css';
 import logo from '../assets/logo-circle.png';
+import { NavLink } from 'react-router-dom';
+import MenuItem from '../Components/MenuItem';
+
 
 import '@fontsource/vt323';
 
@@ -17,39 +20,22 @@ const SubMenu = ({ title, children, isOpen, onToggle }) => {
     );
   };
 
-const MenuItem = ({ title, children }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleSubMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  if (children) {
-    return (
-      <SubMenu title={title} isOpen={isOpen} onToggle={toggleSubMenu}>
-        {children}
-      </SubMenu>
-    );
-  }
-
-  return (
-    <div className={styles.menuItem}>
-      <span>{title}</span>
-    </div>
-  );
-};
-
 const Menu = () => {
   return (
     <div className={styles.menu}>
       <div className={styles.logo}>
-        <img src={logo} alt="Logo" />
+        <NavLink to='/'>
+          <img src={logo} alt="Logo" />
+        </NavLink>        
       </div>
       <MenuItem title="Portfolio" >
         <MenuItem title="Paintings" />
         <MenuItem title="Drawings" />
       </MenuItem>
-      <MenuItem title="About" />
+      
+      <NavLink to='/about' className={styles.link}>
+        <MenuItem title="About" />
+      </NavLink>   
     </div>
   );
 };
