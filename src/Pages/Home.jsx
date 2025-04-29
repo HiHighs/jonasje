@@ -1,6 +1,8 @@
+import Gallery from "../Components/Gallery";
+
 function Home() {
     return (
-        <p>Home, welcome, lolipop kik stek BOEM!</p>
+        <Gallery images={[]}/>
     );
 }
 
