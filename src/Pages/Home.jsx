@@ -1,8 +1,8 @@
-import Gallery from "../Components/Gallery";
+import Drawings from "./Drawings";
 
 function Home() {
     return (
-        <Gallery images={[]}/>
+        <Drawings year='2024'/>
     );
 }
 

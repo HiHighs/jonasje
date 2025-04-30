@@ -8,13 +8,14 @@ function App() {
   return (
     <Router>
       <Menu />
+      
+      <h1>JonasDrawsCats</h1>
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
       </Routes>
 
-      <h1>JonasDrawsCats</h1>
     </Router>
   );
 }

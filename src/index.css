@@ -5,14 +5,13 @@
 
   color-scheme: light dark;
   color: #6b1313;
-  background-color: #fbe3dd;
+  background-color: #ffead6;
   /* background-color: #fbe3cb; */
 }
 
 body {
   margin: 0;
   display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
   padding-left: 250px;

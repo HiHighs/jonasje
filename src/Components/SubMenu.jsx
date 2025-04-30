@@ -1,5 +1,4 @@
 import React from "react";
-
 import styles from './Menu.module.css';
 
 function SubMenu ({ title, children, isOpen, onToggle }) {
