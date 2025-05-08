@@ -1,8 +1,7 @@
-import Drawings from "./Drawings";
-
 function Home() {
     return (
-        <Drawings year='2024'/>
+        // <Drawings year='2024'/>
+        <h1>HOME</h1>
     );
 }
 

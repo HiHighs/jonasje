@@ -27,17 +27,29 @@ function Menu() {
       </div>
 
       <MenuItem title="Portfolio" >
-        <MenuItem title="Paintings" />
-        <MenuItem title="Drawings" />
+        <MenuItem title="Paintings">          
+            <NavLink to='paintings_2024' className={styles.link}>
+              <MenuItem title='2024'/>
+            </NavLink>          
+            <NavLink to='paintings_2025' className={styles.link}>
+              <MenuItem title='2025'/>
+            </NavLink>
+        </MenuItem>
+        
+        
+        <MenuItem title="Drawings">          
+          <NavLink to='drawings_2024' className={styles.link}>
+            <MenuItem title='2024'/>
+          </NavLink>          
+          <NavLink to='drawings_2025' className={styles.link}>
+            <MenuItem title='2025'/>
+          </NavLink>
+        </MenuItem>
       </MenuItem>
       
       <NavLink to='/about' className={styles.link}>
         <MenuItem title="About" />
       </NavLink>
-
-      {/* <NavLink to='www.google.com'>
-        <img src={instagram} alt='Instagram' className={styles.instagram}/>
-      </NavLink> */}
 
       <div className={styles.bottomIcon}>
         <NavLink to='https://www.instagram.com/jonasdrawscats' target="_blank" rel="noopener noreferrer">

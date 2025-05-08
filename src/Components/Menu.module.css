@@ -38,6 +38,10 @@
   padding: 10px;
 }
 
+.subMenu .subMenu .menuItem {
+  padding-left: 60px ;
+}
+
 .content {
   margin-left: 250px;
   padding: 20px;

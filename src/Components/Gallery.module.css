@@ -1,13 +1,18 @@
-.gallery {
+/* .gallery {
     column-count: 4;
     column-gap: 10px;
-/* padding: 60px 20px; */
+} */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 .imageWrapper {
-    break-inside: avoid;
-    margin-bottom: 20px;
-    overflow: hidden;        /* Add this to crop zoomed image */
+    /* break-inside: avoid; */
+    margin-bottom: 0px;
+    overflow: hidden;
     position: relative;
     opacity: 0;
     transform: translateY(40px);
