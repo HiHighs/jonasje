@@ -1,42 +1,40 @@
-/* .gallery {
-    column-count: 4;
-    column-gap: 10px;
-} */
-
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  display: flex;
+  margin-left: -10px; /* gutter size offset */
+  width: auto;
+}
+
+.galleryColumn {
+  padding-left: 10px;
+  background-clip: padding-box;
 }
 
 .imageWrapper {
-    /* break-inside: avoid; */
-    margin-bottom: 0px;
-    overflow: hidden;
-    position: relative;
-    opacity: 0;
-    transform: translateY(40px);
-    animation: fadeInUp 1s ease forwards;
-    animation-delay: 0.2s;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.2s;
 }
 
 .imageWrapper img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.5s ease, opacity 0.2s ease-in-out;
-    cursor: pointer;
-  }
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease, opacity 0.2s ease-in-out;
+  cursor: pointer;
+}
 
 .imageWrapper img:hover {
-    opacity: 0.8;
-    transform: scale(1.02);
-  }
-  
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  opacity: 0.8;
+  transform: scale(1.02);
 }
-  
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
