@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
 
-        <Route path="/paintings_2024" element={<Gallery folder='paintings' year='2024' number='1' />} />
+        <Route path="/paintings_2024" element={<Gallery folder='paintings' year='2024' number='15' />} />
         <Route path="/paintings_2025" element={<Gallery folder='paintings' year='2025' number='2' />} />
 
         <Route path="/drawings_2024" element={<Gallery folder='drawings' year='2024' number='8' />} />
