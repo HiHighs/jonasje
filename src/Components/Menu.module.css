@@ -93,8 +93,6 @@
   justify-content: center;
 }
 
-/* 
-  .content {
-    margin-left: 250px; 
-    padding: 20px;
-  } */
+.activeLink .menuItem {
+  opacity: 70%;
+}
