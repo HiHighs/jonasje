@@ -21,3 +21,11 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+
+
+
+/* globals.css or index.css */
+.yarl__container {
+  --yarl__container_background_color: #ffead6 !important;
+  --yarl__color_backdrop: #ffead6 !important;
+}

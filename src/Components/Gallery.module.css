@@ -38,3 +38,8 @@
     transform: translateY(0);
   }
 }
+
+/* globals.css or index.css */
+.yarl__container {
+  --yarl-bg-color: rgba(50, 50, 50, 0.8) !important;
+}
