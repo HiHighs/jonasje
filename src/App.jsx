@@ -17,7 +17,7 @@ function AppContent() {
     if (location.pathname === '/') {
       root.style.padding = '0';
     } else {
-      root.style.padding = '20px';
+      root.style.padding = '15px';
     }
   }, [location.pathname]);
 

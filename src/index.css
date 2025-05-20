@@ -29,3 +29,9 @@ h1 {
   --yarl__container_background_color: #ffead6 !important;
   --yarl__color_backdrop: #ffead6 !important;
 }
+
+@media (max-width: 768px) {
+  body {
+    padding-left: 0;
+  }
+}

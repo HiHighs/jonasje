@@ -96,3 +96,73 @@
 .activeLink .menuItem {
   opacity: 70%;
 }
+
+/* Hamburger button container */
+.hamburgerWrapper {
+  position: absolute;
+  top: 22px;
+  right: 20px;
+}
+
+.hamburger {
+  font-size: 2.2rem;
+  cursor: pointer;
+  color: #6b1313;
+}
+
+.mobileHeader {
+  padding-bottom: 10px;
+  display: none;
+  height: 50px;
+}
+
+.mobileHeader img {
+  left: 20px;
+  top: 18px;
+  height: 45px;
+  padding-bottom: 5px;
+  position: absolute;
+}
+
+/* Mobile overlay styles */
+@media (max-width: 768px) {
+  .menu {
+    transform: translateX(-100%);
+    width: 100vw;
+    background-color: #fbe3cb;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    
+    padding-top: 60px;
+  }
+
+  .mobileOpen {
+    transform: translateX(0);
+  }  
+
+  .mobileHeader {
+    display: block;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+
+  .menuItem {
+    display: block;
+    padding-left: 10px;
+  }
+
+  .bottomIcon {
+    margin-bottom: 60px;
+  }
+
+  .subMenu .menuItem {
+    padding-left: 10px;
+  }
+  
+  .subMenu .subMenu .menuItem {
+    padding-left: 10px ;
+  }
+}
