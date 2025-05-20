@@ -49,7 +49,6 @@ const Gallery = ({ folder, year, number }) => {
         index={currentIndex}
         slides={images}
         animation={{ fade: 600 }}
-        style={{ '--yarl-bg-color': 'rgba(94, 58, 255, 0.8)' }}
       />
     </>
   );
