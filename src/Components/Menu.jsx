@@ -23,7 +23,11 @@ function Menu() {
   return (
     <>
       <div className={styles.mobileHeader}>
-        <img src={logo} alt="Logo"/>
+
+          <NavLink to='/'>            
+            <img src={logo} alt="Logo"/>
+          </NavLink>
+
         {/* Hamburger icon for mobile */}
         <div className={styles.hamburgerWrapper}>
           <GiHamburgerMenu className={styles.hamburger} onClick={toggleMobileMenu} />
