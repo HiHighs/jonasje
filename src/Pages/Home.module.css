@@ -82,4 +82,8 @@
   .imageContainer {
     margin-right: 0px;
   }
+
+  .button {
+    margin-bottom: 75px;
+  }
 }
