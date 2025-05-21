@@ -71,3 +71,15 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 768px) {
+
+  .homeContainer {
+    margin-top: 15px;
+    height: 100%;
+  }
+
+  .imageContainer {
+    margin-right: 0px;
+  }
+}
