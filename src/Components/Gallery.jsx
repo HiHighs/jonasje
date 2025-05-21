@@ -8,10 +8,15 @@ const Gallery = ({ folder, year, number }) => {
   const [open, setOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const images = Array.from({ length: number }, (_, i) => ({
-    src: `/assets/${folder}/${year}/${i + 1}.jpg`,
-    alt: `Drawing ${i + 1}`,
-  }));
+  const images = Array.from({ length: number }, (_, i) => {
+    const index = i + 1;
+    return {
+      src: `/assets/${folder}/${year}/${index}.jpg`, // full-size for Lightbox
+      alt: `Drawing ${index}`,
+      thumbnail: `/assets/${folder}/${year}/thumbnails/${index}.jpg`, // thumbnails
+    };
+  });
+
 
   const breakpointColumnsObj = {
     default: 4,
@@ -38,7 +43,7 @@ const Gallery = ({ folder, year, number }) => {
             className={styles.imageWrapper}
             onClick={() => handleClick(idx)}
           >
-            <img src={img.src} alt={img.alt} loading="lazy" />
+            <img src={img.thumbnail} alt={img.alt} loading="lazy" />
           </div>
         ))}
       </Masonry>
