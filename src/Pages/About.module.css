@@ -16,6 +16,20 @@
     opacity: 0.8;
 }
 
+.container p {
+  font-size: 1.3rem
+}
+
+.container a {
+  text-decoration: none;
+  color: #c95959;
+}
+
+.container a:hover {
+  text-decoration: none;
+  color: #fc4e4e;
+}
+
 @keyframes fadeIn {
   to {
     opacity: 1;
