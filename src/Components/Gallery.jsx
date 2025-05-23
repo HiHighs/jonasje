@@ -3,19 +3,25 @@ import styles from './Gallery.module.css';
 import { useState } from 'react';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
+import Captions from 'yet-another-react-lightbox/plugins/captions';
+import 'yet-another-react-lightbox/plugins/captions.css';
 
-const Gallery = ({ folder, year, number }) => {
+
+const Gallery = ({ folder, year, filenames }) => {
   const [open, setOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const images = Array.from({ length: number }, (_, i) => {
-    const index = i + 1;
+  const images = filenames.map((filename) => {
+    const nameWithoutExtension = filename.replace(/\.[^/.]+$/, '');
+    const displayName = nameWithoutExtension.replace(/[-_]/g, ' ');
     return {
-      src: `/assets/${folder}/${year}/${index}.jpg`, // full-size for Lightbox
-      alt: `Drawing ${index}`,
-      thumbnail: `/assets/${folder}/${year}/thumbnails/${index}.jpg`, // thumbnails
+      src: `/assets/${folder}/${year}/${filename}`,
+      thumbnail: `/assets/${folder}/${year}/thumbnails/${filename}`,
+      alt: displayName,
+      description: displayName, // ✅ This is what Captions plugin looks for
     };
   });
+
 
 
   const breakpointColumnsObj = {
@@ -43,7 +49,8 @@ const Gallery = ({ folder, year, number }) => {
             className={styles.imageWrapper}
             onClick={() => handleClick(idx)}
           >
-            <img src={img.thumbnail} alt={img.alt} loading="lazy" />
+            <img src={img.thumbnail} alt={img.alt} loading="lazy"></img>
+            <div className={styles.caption}>{img.alt}</div>
           </div>
         ))}
       </Masonry>
@@ -54,6 +61,8 @@ const Gallery = ({ folder, year, number }) => {
         index={currentIndex}
         slides={images}
         animation={{ fade: 600 }}
+        plugins={[Captions]}
+        captions={{ descriptionTextAlign: 'center' }}
       />
     </>
   );

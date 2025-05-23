@@ -22,16 +22,48 @@ h1 {
   line-height: 1.1;
 }
 
-
-
 /* globals.css or index.css */
 .yarl__container {
   --yarl__container_background_color: #ffead6 !important;
   --yarl__color_backdrop: #ffead6 !important;
 }
 
+.yarl__slide_captions_container  {
+  background: none !important;
+}
+
+.yarl__slide_description {
+  bottom: 15px;
+  right: 15px;
+  font-size: 2.2rem;
+  color: #6b1313 !important;
+  background: #ffead6;
+  padding: 1rem 2rem;
+  /* border-radius: 8px; */
+  text-align: center;
+  max-width: 50%;
+  position: absolute;
+}
+
+.yarl__container button {
+  color: #6b1313 !important;
+  filter: none;
+  transition: opacity 0.3s ease;
+}
+
+.yarl__container button:hover {
+  opacity: 0.7;
+}
+
 @media (max-width: 768px) {
   body {
     padding-left: 0;
+  }
+
+  .yarl__slide_description {   
+    font-size: 1.15rem;
+    bottom: 0;
+    right: 0;
+    padding: 0rem 0.5rem;
   }
 }
